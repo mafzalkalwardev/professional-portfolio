@@ -77,8 +77,7 @@
         if (ticking) return;
         ticking = true;
         requestAnimationFrame(() => {
-          const y = window.scrollY * 0.15;
-          mesh.style.transform = `translateY(${y}px)`;
+          mesh.style.transform = `translateY(${window.scrollY * 0.12}px)`;
           ticking = false;
         });
       },
