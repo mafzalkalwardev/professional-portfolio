@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills | Muhammad Afzal Kalwar</title>
   <meta name="description" content="Technical skills — Python, React, Node.js, Go, Playwright, PyQt6, Docker, and more." />
-  <link rel="stylesheet" href="css/styles.css?v=4" />
-  <link rel="stylesheet" href="css/animations.css?v=4" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/animations.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -26,6 +26,7 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html" class="active">Skills</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="nav-cv" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a></li>
       <li><a href="https://github.com/mafzalkalwardev" class="nav-cta" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
   </nav>
@@ -34,7 +35,7 @@
     <div class="container">
       <header class="page-header reveal">
         <h1 class="page-title">Skills</h1>
-        <p class="page-subtitle">Technologies and tools I use to deliver production-ready software.</p>
+        <p class="page-subtitle">Technologies I use daily — from Air University CS fundamentals to production full-stack delivery.</p>
       </header>
 
       <section class="skills-grid stagger-grid reveal">
@@ -54,14 +55,12 @@
       </section>
 
       <section class="section">
-        <div class="section-head reveal"><h2>Technologies</h2></div>
-        <div class="tech-list reveal">
-          <span>Python</span><span>JavaScript</span><span>TypeScript</span><span>Go</span>
-          <span>React</span><span>Node.js</span><span>FastAPI</span><span>Express</span>
-          <span>PyQt6</span><span>Playwright</span><span>Selenium</span><span>Docker</span>
-          <span>MongoDB</span><span>SQLite</span><span>PostgreSQL</span><span>Redis</span>
-          <span>TensorFlow</span><span>Whisper</span><span>Groq</span><span>Git</span>
+        <div class="section-head center reveal">
+          <span class="section-label">Stack</span>
+          <h2>Technologies &amp; tools</h2>
+          <p>Professional icons for the full stack I work with</p>
         </div>
+        <div class="tech-icon-grid stagger-grid reveal" id="techIconGrid"></div>
       </section>
     </div>
   </main>
@@ -69,6 +68,7 @@
   <footer class="footer">
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
-  <script src="js/motion.js?v=4"></script>
+  <script src="js/tech-stack.js?v=5"></script>
+  <script src="js/motion.js?v=5"></script>
 </body>
 </html>

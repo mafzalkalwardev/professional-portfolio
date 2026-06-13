@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Afzal Kalwar | Full-Stack Developer</title>
-  <meta name="description" content="Muhammad Afzal Kalwar — Full-Stack Developer & Automation Engineer. Python, React, Node.js, PyQt6, Playwright. Available for freelance and remote work." />
+  <meta name="description" content="Muhammad Afzal Kalwar — Full-Stack Developer & Automation Engineer. B.S. Computer Science, Air University Islamabad. Python, React, Node.js, PyQt6." />
   <link rel="canonical" href="https://mafzalkalwardev.github.io/" />
-  <link rel="stylesheet" href="css/styles.css?v=4" />
-  <link rel="stylesheet" href="css/animations.css?v=4" />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/animations.css?v=5" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -29,6 +29,7 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="nav-cv" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a></li>
       <li><a href="https://github.com/mafzalkalwardev" class="nav-cta" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
   </nav>
@@ -47,10 +48,14 @@
               <h1 data-split>Muhammad Afzal Kalwar</h1>
               <p class="hero-title-line">Full-Stack Developer &amp; Automation Engineer</p>
               <p class="hero-lead">
-                I design and build web applications, Python desktop software, and automation systems for businesses that need dependable, maintainable code — not demos.
+                B.S. Computer Science graduate from Air University Islamabad. I build web apps, Python desktop software, and automation systems for teams that need production-ready code.
               </p>
               <div class="hero-actions">
                 <a href="projects.html" class="btn btn-primary btn-lg">View projects</a>
+                <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="btn btn-cv btn-lg" download="Muhammad-Afzal-Kalwar-CV.pdf">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                  Download CV
+                </a>
                 <a href="contact.html" class="btn btn-secondary btn-lg">Contact me</a>
               </div>
             </div>
@@ -67,21 +72,18 @@
 
         <aside class="hero-aside">
           <div class="bento-card reveal-scale delay-1">
+            <h3>Education</h3>
+            <p class="education-school" style="margin:0 0 0.35rem;font-size:0.9375rem">Air University, Islamabad</p>
+            <p style="font-size:0.8125rem;color:var(--text-secondary);margin:0 0 0.25rem;font-weight:600">B.S. Computer Science</p>
+            <p style="font-size:0.75rem;color:var(--text-muted);margin:0">Graduated — algorithms, software engineering, databases &amp; systems.</p>
+          </div>
+          <div class="bento-card reveal-scale delay-2">
             <h3>By the numbers</h3>
             <div class="bento-stats">
               <div class="bento-stat"><strong><span data-count="40" data-suffix="+">0</span></strong><span>GitHub repos</span></div>
               <div class="bento-stat"><strong><span data-count="38">0</span></strong><span>Projects shown</span></div>
               <div class="bento-stat"><strong><span data-count="5" data-suffix="+">0</span></strong><span>Years coding</span></div>
               <div class="bento-stat"><strong>Open</strong><span>For new work</span></div>
-            </div>
-          </div>
-          <div class="bento-card reveal-scale delay-2">
-            <h3>Tech stack</h3>
-            <div class="marquee-wrap">
-              <div class="marquee-track" aria-hidden="true">
-                <span>Python</span><span>React</span><span>Node.js</span><span>TypeScript</span><span>Go</span><span>PyQt6</span><span>Playwright</span><span>FastAPI</span><span>Docker</span><span>MongoDB</span><span>SQLite</span><span>Whisper</span>
-                <span>Python</span><span>React</span><span>Node.js</span><span>TypeScript</span><span>Go</span><span>PyQt6</span><span>Playwright</span><span>FastAPI</span><span>Docker</span><span>MongoDB</span><span>SQLite</span><span>Whisper</span>
-              </div>
             </div>
           </div>
         </aside>
@@ -97,6 +99,17 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="section-label">Technologies</span>
+          <h2>Tech stack</h2>
+          <p>Tools and frameworks I use to ship production software</p>
+        </div>
+        <div class="tech-icon-grid stagger-grid reveal" id="techIconGrid"></div>
+      </div>
+    </section>
+
     <section class="section section-subtle">
       <div class="container">
         <div class="section-head reveal">
@@ -105,26 +118,10 @@
           <p>End-to-end development across web, desktop, and automation</p>
         </div>
         <div class="services-grid stagger-grid reveal">
-          <article class="service-card">
-            <div class="service-num">01</div>
-            <h3>Web applications</h3>
-            <p>React frontends, Node.js APIs, dashboards, and SaaS products with clean architecture.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-num">02</div>
-            <h3>Python &amp; desktop software</h3>
-            <p>PyQt6 Windows applications, FastAPI services, scripts, and internal business tools.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-num">03</div>
-            <h3>Automation &amp; scraping</h3>
-            <p>Playwright and Selenium pipelines for data extraction, monitoring, and workflow automation.</p>
-          </article>
-          <article class="service-card">
-            <div class="service-num">04</div>
-            <h3>AI integration</h3>
-            <p>Whisper transcription, LLM-powered features, call analytics, and ML prototypes.</p>
-          </article>
+          <article class="service-card"><div class="service-num">01</div><h3>Web applications</h3><p>React frontends, Node.js APIs, dashboards, and SaaS products with clean architecture.</p></article>
+          <article class="service-card"><div class="service-num">02</div><h3>Python &amp; desktop software</h3><p>PyQt6 Windows applications, FastAPI services, scripts, and internal business tools.</p></article>
+          <article class="service-card"><div class="service-num">03</div><h3>Automation &amp; scraping</h3><p>Playwright and Selenium pipelines for data extraction, monitoring, and workflow automation.</p></article>
+          <article class="service-card"><div class="service-num">04</div><h3>AI integration</h3><p>Whisper transcription, LLM-powered features, call analytics, and ML prototypes.</p></article>
         </div>
       </div>
     </section>
@@ -147,8 +144,14 @@
       <div class="container">
         <div class="cta-band reveal-scale">
           <h2>Have a project in mind?</h2>
-          <p>Freelance, contract, and remote engagements — let's discuss your requirements and timeline.</p>
-          <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+          <p>Freelance, contract, and remote engagements — download my CV or get in touch directly.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center">
+            <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+            <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="btn btn-cv btn-lg" download="Muhammad-Afzal-Kalwar-CV.pdf">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download CV
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -158,13 +161,16 @@
     <div class="footer-links">
       <a href="https://github.com/mafzalkalwardev" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/muhammad-afzal-2670b527b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a>
       <a href="mailto:kalwarmuhammadafzal3@gmail.com">Email</a>
     </div>
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
 
-  <script src="js/projects-data.js?v=4"></script>
-  <script src="js/projects.js?v=4"></script>
-  <script src="js/motion.js?v=4"></script>
+  <script src="js/site.js?v=5"></script>
+  <script src="js/tech-stack.js?v=5"></script>
+  <script src="js/projects-data.js?v=5"></script>
+  <script src="js/projects.js?v=5"></script>
+  <script src="js/motion.js?v=5"></script>
 </body>
 </html>

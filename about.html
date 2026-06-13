@@ -4,9 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Muhammad Afzal Kalwar</title>
-  <meta name="description" content="About Muhammad Afzal Kalwar — Full-Stack Developer and Automation Engineer from Islamabad, Pakistan." />
-  <link rel="stylesheet" href="css/styles.css?v=4" />
-  <link rel="stylesheet" href="css/animations.css?v=4" />
+  <meta name="description" content="About Muhammad Afzal Kalwar — B.S. Computer Science, Air University Islamabad. Full-Stack Developer and Automation Engineer." />
+  <link rel="stylesheet" href="css/styles.css?v=5" />
+  <link rel="stylesheet" href="css/animations.css?v=5" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -26,6 +26,7 @@
       <li><a href="projects.html">Projects</a></li>
       <li><a href="skills.html">Skills</a></li>
       <li><a href="contact.html">Contact</a></li>
+      <li><a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="nav-cv" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a></li>
       <li><a href="https://github.com/mafzalkalwardev" class="nav-cta" target="_blank" rel="noopener">GitHub</a></li>
     </ul>
   </nav>
@@ -34,7 +35,7 @@
     <div class="container">
       <header class="page-header reveal">
         <h1 class="page-title">About</h1>
-        <p class="page-subtitle">Full-Stack Developer & Automation Engineer based in Islamabad, Pakistan — working remotely with clients worldwide.</p>
+        <p class="page-subtitle">Computer Science graduate from Air University Islamabad — building production software for clients worldwide.</p>
       </header>
 
       <section class="about-grid">
@@ -44,16 +45,28 @@
         <div class="about-text reveal delay-1">
           <h2>Background</h2>
           <p>I'm Muhammad Afzal Kalwar, a software developer who builds tools that solve real operational problems — dialers, CRM systems, email platforms, scrapers, and business automation.</p>
-          <p>My work spans Python backends, React frontends, browser automation with Playwright and Selenium, and Windows desktop apps with PyQt6. I maintain 40+ open source repositories that demonstrate production-quality code and documentation.</p>
-          <p>I'm available for freelance, contract, and remote roles where reliability, clear communication, and maintainable architecture matter.</p>
-          <a href="contact.html" class="btn btn-primary" style="margin-top:0.25rem">Contact me</a>
+          <p>I graduated with a <strong>Bachelor of Science in Computer Science from Air University, Islamabad</strong>, and apply that foundation across Python backends, React frontends, browser automation, and PyQt6 desktop apps.</p>
+          <p>I maintain 40+ open source repositories and am available for freelance, contract, and remote roles.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.625rem;margin-top:0.5rem">
+            <a href="contact.html" class="btn btn-primary">Contact me</a>
+            <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="btn btn-cv" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="padding-top:2rem">
+        <div class="education-card reveal">
+          <div class="education-icon" aria-hidden="true">AU</div>
+          <div>
+            <h3>Bachelor of Science in Computer Science</h3>
+            <p class="education-school">Air University, Islamabad</p>
+            <p>Graduated with a Computer Science degree covering algorithms, software engineering, databases, operating systems, and systems programming.</p>
+          </div>
         </div>
       </section>
 
       <section class="section">
-        <div class="section-head reveal">
-          <h2>Services</h2>
-        </div>
+        <div class="section-head reveal"><h2>Services</h2></div>
         <div class="services-grid stagger-grid reveal">
           <article class="service-card"><div class="service-num">01</div><h3>Web development</h3><p>React, Node.js, REST APIs, dashboards, and SaaS applications.</p></article>
           <article class="service-card"><div class="service-num">02</div><h3>Python development</h3><p>Scripts, PyQt6 desktop apps, FastAPI services, and data pipelines.</p></article>
@@ -63,20 +76,21 @@
       </section>
 
       <section class="section section-subtle" style="margin-bottom:3rem">
-        <div class="section-head reveal"><h2>Experience</h2></div>
+        <div class="section-head reveal"><h2>Experience &amp; education</h2></div>
         <div class="timeline reveal">
+          <div class="timeline-item"><span class="timeline-date">Education</span><h3>B.S. Computer Science — Air University, Islamabad</h3><p>Graduated with a degree in Computer Science from Air University Islamabad.</p></div>
           <div class="timeline-item"><span class="timeline-date">Present</span><h3>Independent developer</h3><p>Building open source tools and delivering freelance and contract projects remotely.</p></div>
           <div class="timeline-item"><span class="timeline-date">Portfolio</span><h3>38+ showcased projects</h3><p>Dialers, email tools, scrapers, CRM systems, ML projects, and client websites on GitHub.</p></div>
-          <div class="timeline-item"><span class="timeline-date">Stack</span><h3>Full-stack & automation</h3><p>Python, Go, Node.js, TypeScript, React, PyQt6, Playwright, Docker, SQLite, MongoDB.</p></div>
         </div>
       </section>
     </div>
   </main>
 
   <footer class="footer">
-    <div class="footer-links"><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div>
+    <div class="footer-links"><a href="projects.html">Projects</a><a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a><a href="contact.html">Contact</a></div>
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
-  <script src="js/motion.js?v=4"></script>
+  <script src="js/tech-stack.js?v=5"></script>
+  <script src="js/motion.js?v=5"></script>
 </body>
 </html>

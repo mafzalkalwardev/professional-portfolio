@@ -176,6 +176,28 @@
     initTilt('#featuredProjects .project-card', 4);
   }
 
+  /* ── Tech icon hover glow ── */
+  function initTechIconHover(container) {
+    if (reducedMotion) return;
+    (container || document).querySelectorAll('.tech-icon-item').forEach((item) => {
+      item.addEventListener('mouseenter', () => {
+        item.style.borderColor = 'rgba(29, 78, 216, 0.25)';
+      });
+      item.addEventListener('mouseleave', () => {
+        item.style.borderColor = '';
+      });
+    });
+  }
+  window.initTechIconHover = initTechIconHover;
+
+  /* ── Tech stack grids ── */
+  function initTechStack() {
+    if (typeof window.renderTechIconGrid === 'function') {
+      renderTechIconGrid('techIconGrid');
+      renderTechIconGrid('techIconGridHome');
+    }
+  }
+
   /* ── Boot ── */
   initNav();
   initHeroWords();
@@ -185,6 +207,8 @@
   initMagneticButtons();
   initSkillBars();
   initFeatured();
+  initTechStack();
   initTilt('.service-card', 3);
   initTilt('.bento-card', 2.5);
+  initTilt('.education-card', 2);
 })();

@@ -167,6 +167,26 @@ body { animation: pageIn 0.5s ease; }
   display: none !important;
 }
 
+.filter-btn { transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1); }
+
+.tech-icon-item.visible .tech-icon-wrap {
+  animation: iconPop 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes iconPop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.education-card.visible {
+  animation: slideUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.btn-cv svg { width: 16px; height: 16px; flex-shrink: 0; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
