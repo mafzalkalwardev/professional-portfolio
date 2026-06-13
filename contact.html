@@ -55,12 +55,27 @@
           <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="btn btn-cv btn-block" style="margin-top:1rem" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV (PDF)</a>
         </div>
 
-        <form class="contact-form reveal delay-1" id="contactForm">
+        <form
+          class="contact-form reveal delay-1"
+          id="contactForm"
+          action="https://formsubmit.co/kalarmuhammadafzal3@gmail.com"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="New portfolio inquiry — mafzalkalwardev.github.io" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="true" />
+          <input type="hidden" name="_next" value="https://mafzalkalwardev.github.io/contact.html?sent=1" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+
+          <div class="form-success hidden" id="formSuccess" role="status">
+            Thanks — your message was sent. I'll reply within 24 hours.
+          </div>
+
           <h2>Send a message</h2>
           <label>Name<input type="text" name="name" required placeholder="Your name" /></label>
-          <label>Email<input type="email" name="email" required placeholder="you@email.com" /></label>
+          <label>Email<input type="email" name="_replyto" required placeholder="you@email.com" /></label>
           <label>Project type
-            <select name="type">
+            <select name="project_type">
               <option>Web Development</option>
               <option>Python / Desktop App</option>
               <option>Automation / Scraping</option>
@@ -69,7 +84,7 @@
             </select>
           </label>
           <label>Message<textarea name="message" rows="5" required placeholder="Describe your project, timeline, and budget."></textarea></label>
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Send message</button>
+          <button type="submit" class="btn btn-primary btn-lg btn-block" id="submitBtn">Send message</button>
         </form>
       </section>
     </div>
@@ -78,7 +93,7 @@
   <footer class="footer">
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
-  <script src="js/motion.js?v=6"></script>
-  <script src="js/contact.js?v=6"></script>
+  <script src="js/motion.js?v=7"></script>
+  <script src="js/contact.js?v=7"></script>
 </body>
 </html>
