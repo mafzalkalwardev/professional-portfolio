@@ -4,7 +4,6 @@
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Nav scroll + mobile toggle
   const nav = document.getElementById('nav');
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
@@ -20,22 +19,24 @@
     });
   }
 
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const revealObs = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((e) => {
-        if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          revealObs.unobserve(e.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
-  revealEls.forEach((el) => revealObs.observe(el));
+  function initReveal(els) {
+    const revealEls = els || document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            revealObs.unobserve(e.target);
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    revealEls.forEach((el) => revealObs.observe(el));
+  }
+  window.initReveal = initReveal;
+  initReveal();
 
-  // Typing effect (home page)
   const typingEl = document.getElementById('typing');
   if (typingEl) {
     const phrases = [
@@ -43,7 +44,6 @@
       'Python Engineer',
       'Automation Specialist',
       'Open Source Builder',
-      'Available for Hire',
     ];
     let pi = 0;
     let ci = 0;
@@ -55,7 +55,7 @@
         typingEl.textContent = phrase.slice(0, ++ci);
         if (ci === phrase.length) {
           deleting = true;
-          setTimeout(tick, 2000);
+          setTimeout(tick, 2200);
           return;
         }
       } else {
@@ -65,12 +65,11 @@
           pi = (pi + 1) % phrases.length;
         }
       }
-      setTimeout(tick, deleting ? 40 : 80);
+      setTimeout(tick, deleting ? 35 : 70);
     }
     tick();
   }
 
-  // Counter animation
   const statNums = document.querySelectorAll('.stat-num[data-count]');
   const countObs = new IntersectionObserver(
     (entries) => {
@@ -78,7 +77,7 @@
         if (!e.isIntersecting) return;
         const el = e.target;
         const target = parseInt(el.dataset.count, 10);
-        const duration = 1500;
+        const duration = 1400;
         const start = performance.now();
         function step(now) {
           const p = Math.min((now - start) / duration, 1);
@@ -95,15 +94,12 @@
   );
   statNums.forEach((el) => countObs.observe(el));
 
-  // Skill bars
   const skillFills = document.querySelectorAll('.skill-fill[data-width]');
   const skillObs = new IntersectionObserver(
     (entries) => {
       entries.forEach((e) => {
         if (!e.isIntersecting) return;
         const fill = e.target;
-        fill.style.setProperty('--w', fill.dataset.width + '%');
-        fill.classList.add('animated');
         fill.style.width = fill.dataset.width + '%';
         skillObs.unobserve(fill);
       });
@@ -112,16 +108,10 @@
   );
   skillFills.forEach((el) => skillObs.observe(el));
 
-  // Page transition on internal links
-  document.querySelectorAll('a[href]').forEach((a) => {
-    const href = a.getAttribute('href');
-    if (!href || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('#')) return;
-    a.addEventListener('click', (ev) => {
-      if (ev.metaKey || ev.ctrlKey) return;
-      ev.preventDefault();
-      document.body.style.opacity = '0';
-      document.body.style.transition = 'opacity 0.25s';
-      setTimeout(() => { window.location.href = href; }, 200);
-    });
-  });
+  const featuredEl = document.getElementById('featuredProjects');
+  if (featuredEl && window.PORTFOLIO_PROJECTS && typeof window.renderProjectCard === 'function') {
+    const featured = window.PORTFOLIO_PROJECTS.filter((p) => p.featured).slice(0, 6);
+    featuredEl.innerHTML = featured.map((p, i) => window.renderProjectCard(p, i)).join('');
+    initReveal(featuredEl.querySelectorAll('.reveal'));
+  }
 })();

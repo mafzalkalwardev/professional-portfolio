@@ -10,15 +10,9 @@
   <link rel="stylesheet" href="css/animations.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-<body class="page-home">
-  <div class="bg-gradient"></div>
-  <div class="bg-grid"></div>
-  <div class="orb orb-1"></div>
-  <div class="orb orb-2"></div>
-  <div class="orb orb-3"></div>
-
+<body>
   <nav class="nav" id="nav">
     <a class="nav-logo" href="index.html">MA<span>K</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -34,107 +28,117 @@
 
   <main>
     <section class="hero">
-      <div class="hero-content reveal">
-        <p class="hero-badge animate-float">Open to freelance & remote work</p>
-        <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Muhammad Afzal</span>
-        </h1>
-        <p class="hero-subtitle">
-          <span id="typing"></span><span class="cursor-blink">|</span>
-        </p>
-        <p class="hero-desc">
-          Full-Stack Developer & Automation Engineer from Islamabad, Pakistan.
-          I build web apps, Python desktop tools, APIs, scrapers, and AI-powered automation.
-        </p>
-        <div class="hero-actions">
-          <a href="projects.html" class="btn btn-primary">View Projects</a>
-          <a href="contact.html" class="btn btn-outline">Hire Me</a>
-          <a href="https://github.com/mafzalkalwardev" class="btn btn-ghost" target="_blank" rel="noopener">GitHub →</a>
-        </div>
-      </div>
-      <div class="hero-visual reveal delay-2">
-        <div class="code-window animate-float-slow">
-          <div class="code-header">
-            <span></span><span></span><span></span>
-            <code>developer.py</code>
+      <div class="container hero-grid">
+        <div class="reveal">
+          <span class="eyebrow">Available for hire</span>
+          <p class="hero-role">Full-Stack Developer · Islamabad, Pakistan</p>
+          <h1>Muhammad Afzal Kalwar</h1>
+          <p class="hero-lead">
+            I build production web apps, Python desktop tools, automation pipelines, and APIs for teams that need reliable software delivered on time.
+          </p>
+          <p class="hero-subtitle"><span id="typing"></span></p>
+          <div class="hero-actions">
+            <a href="projects.html" class="btn btn-primary btn-lg">View Projects</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg">Contact Me</a>
           </div>
-          <pre class="code-body"><code><span class="c-kw">class</span> <span class="c-class">Developer</span>:
-    name = <span class="c-str">"Muhammad Afzal Kalwar"</span>
-    role = <span class="c-str">"Full-Stack Developer"</span>
-    stack = [<span class="c-str">"Python"</span>, <span class="c-str">"React"</span>, <span class="c-str">"Node.js"</span>]
-
-    <span class="c-kw">def</span> <span class="c-fn">available</span>(self):
-        <span class="c-kw">return</span> <span class="c-bool">True</span></code></pre>
+          <div class="hero-meta">
+            <span>40+ open source repos</span>
+            <span>Remote worldwide</span>
+            <span>Freelance & contract</span>
+          </div>
+        </div>
+        <div class="hero-card reveal delay-2">
+          <h3>At a glance</h3>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong><span class="stat-num" data-count="40">0</span>+</strong>
+              <span>GitHub repositories</span>
+            </div>
+            <div class="hero-stat">
+              <strong><span class="stat-num" data-count="5">0</span>+</strong>
+              <span>Years experience</span>
+            </div>
+            <div class="hero-stat">
+              <strong><span class="stat-num" data-count="38">0</span></strong>
+              <span>Portfolio projects</span>
+            </div>
+            <div class="hero-stat">
+              <strong>Open</strong>
+              <span>to new work</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="stats-section">
-      <div class="stats-grid">
-        <div class="stat-card reveal">
-          <span class="stat-num" data-count="40">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Open Source Repos</span>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="eyebrow">What I do</span>
+          <h2>Services for clients</h2>
+          <p>End-to-end development across web, desktop, and automation</p>
         </div>
-        <div class="stat-card reveal delay-1">
-          <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Years Coding</span>
-        </div>
-        <div class="stat-card reveal delay-2">
-          <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Tech Stacks</span>
-        </div>
-        <div class="stat-card reveal delay-3">
-          <span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span>
-          <span class="stat-label">Client Focus</span>
+        <div class="services-grid">
+          <article class="service-card reveal">
+            <div class="service-icon">&#9670;</div>
+            <h3>Web Development</h3>
+            <p>React dashboards, Node.js APIs, SaaS products, and client portals.</p>
+          </article>
+          <article class="service-card reveal delay-1">
+            <div class="service-icon">&#9670;</div>
+            <h3>Python & Desktop</h3>
+            <p>PyQt6 Windows apps, FastAPI backends, scripts, and data tools.</p>
+          </article>
+          <article class="service-card reveal delay-2">
+            <div class="service-icon">&#9670;</div>
+            <h3>Automation</h3>
+            <p>Playwright scrapers, Selenium workflows, RPA, and integrations.</p>
+          </article>
+          <article class="service-card reveal delay-3">
+            <div class="service-icon">&#9670;</div>
+            <h3>AI Integration</h3>
+            <p>Whisper transcription, Groq LLMs, call analytics, and ML prototypes.</p>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="section-header reveal">
-        <span class="section-tag">Featured</span>
-        <h2>Highlighted Projects</h2>
-        <p>Production-grade tools from my GitHub portfolio</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card reveal">
-          <div class="project-icon">📞</div>
-          <h3>Auto Dialer Pro</h3>
-          <p>PyQt6 desktop dialer with Google Voice, AMD, CRM, and predictive pacing.</p>
-          <div class="tags"><span>Python</span><span>PyQt6</span><span>SQLite</span></div>
-          <a href="https://github.com/mafzalkalwardev/indus-transport-auto-dialer" target="_blank" rel="noopener">View repo →</a>
-        </article>
-        <article class="project-card reveal delay-1">
-          <div class="project-icon">📧</div>
-          <h3>Bulk Email Verifier</h3>
-          <p>Self-hosted email verification with Go + Node.js. No paid APIs.</p>
-          <div class="tags"><span>Go</span><span>Node.js</span><span>Docker</span></div>
-          <a href="https://github.com/mafzalkalwardev/bulk-email-verifier" target="_blank" rel="noopener">View repo →</a>
-        </article>
-        <article class="project-card reveal delay-2">
-          <div class="project-icon">🎯</div>
-          <h3>Fiverr Lead CRM</h3>
-          <p>Playwright scraper with MongoDB storage and Excel export.</p>
-          <div class="tags"><span>TypeScript</span><span>Playwright</span></div>
-          <a href="https://github.com/mafzalkalwardev/fiverr-lead-extractor-crm" target="_blank" rel="noopener">View repo →</a>
-        </article>
-      </div>
-      <div class="section-cta reveal">
-        <a href="projects.html" class="btn btn-primary">See All Projects</a>
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Featured work</span>
+          <h2>Selected projects</h2>
+          <p>Real tools from my GitHub portfolio — each with a live preview</p>
+        </div>
+        <div class="project-grid" id="featuredProjects"></div>
+        <div class="section-cta reveal">
+          <a href="projects.html" class="btn btn-primary">View all 38 projects</a>
+        </div>
       </div>
     </section>
 
-    <section class="section cta-banner reveal">
-      <h2>Let's build your next project</h2>
-      <p>Freelance · Contract · Remote — available worldwide</p>
-      <a href="contact.html" class="btn btn-primary btn-lg">Get In Touch</a>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Ready to start your project?</h2>
+          <p>Freelance, contract, and remote engagements — let's discuss your requirements.</p>
+          <a href="contact.html" class="btn btn-primary btn-lg">Get in touch</a>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© <span id="year"></span> Muhammad Afzal Kalwar · <a href="https://github.com/mafzalkalwardev" target="_blank" rel="noopener">GitHub</a></p>
+    <div class="footer-links">
+      <a href="https://github.com/mafzalkalwardev" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/muhammad-afzal-2670b527b/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
 
+  <script src="js/projects-data.js"></script>
+  <script src="js/projects.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

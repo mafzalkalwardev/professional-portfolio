@@ -1,23 +1,76 @@
 (function () {
   'use strict';
-  const buttons = document.querySelectorAll('.filter-btn');
-  const cards = document.querySelectorAll('.project-card-full');
 
+  function fixText(str) {
+    if (!str) return '';
+    return str
+      .replace(/\u00e2\u20ac\u201d/g, '—')
+      .replace(/\u00e2\u20ac\u201c/g, '"')
+      .replace(/\u00e2\u20ac\u2122/g, "'")
+      .replace(/â€"/g, '—')
+      .replace(/â€"/g, '"');
+  }
+
+  function escapeHtml(str) {
+    const d = document.createElement('div');
+    d.textContent = str;
+    return d.innerHTML;
+  }
+
+  function projectCard(project, index) {
+    const delay = index % 3 === 1 ? ' delay-1' : index % 3 === 2 ? ' delay-2' : '';
+    const tags = (project.tags || [])
+      .map((t) => `<span class="tag">${escapeHtml(t)}</span>`)
+      .join('');
+    const desc = escapeHtml(fixText(project.description));
+    const name = escapeHtml(project.name);
+    const url = escapeHtml(project.url);
+    const img = escapeHtml(project.image);
+    const category = escapeHtml(project.category || '');
+
+    return `
+      <article class="project-card reveal${delay}" data-category="${category}">
+        <div class="project-shot">
+          <img src="${img}" alt="${name} screenshot" loading="lazy" width="640" height="400" />
+        </div>
+        <div class="project-body">
+          <h3>${name}</h3>
+          <p>${desc}</p>
+          <div class="tags">${tags}</div>
+          <div class="project-links">
+            <a href="${url}" target="_blank" rel="noopener">View on GitHub</a>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  window.renderProjectCard = projectCard;
+  window.fixProjectText = fixText;
+
+  const grid = document.getElementById('projectsGrid');
+  if (!grid || !window.PORTFOLIO_PROJECTS) return;
+
+  const projects = window.PORTFOLIO_PROJECTS.slice().sort((a, b) => {
+    if (a.featured && !b.featured) return -1;
+    if (!a.featured && b.featured) return 1;
+    return a.name.localeCompare(b.name);
+  });
+
+  grid.innerHTML = projects.map(projectCard).join('');
+
+  const buttons = document.querySelectorAll('.filter-btn');
   buttons.forEach((btn) => {
     btn.addEventListener('click', () => {
       buttons.forEach((b) => b.classList.remove('active'));
       btn.classList.add('active');
       const filter = btn.dataset.filter;
-      cards.forEach((card) => {
-        const cats = card.dataset.category || '';
-        const show = filter === 'all' || cats.includes(filter);
+      grid.querySelectorAll('.project-card').forEach((card) => {
+        const cat = card.dataset.category || '';
+        const show = filter === 'all' || cat === filter;
         card.classList.toggle('hidden', !show);
-        if (show) {
-          card.style.animation = 'none';
-          card.offsetHeight;
-          card.style.animation = '';
-        }
       });
     });
   });
+
+  if (window.initReveal) window.initReveal(grid.querySelectorAll('.reveal'));
 })();
