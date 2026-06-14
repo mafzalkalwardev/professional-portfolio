@@ -117,7 +117,7 @@ window.PORTFOLIO_PROJECTS = [
       "Node.js"
     ],
     "url": "https://github.com/mafzalkalwardev/clientreadyftsolutionsdombom",
-    "image": "assets/projects/clientreadyftsolutionsdombom.svg",
+    "image": "assets/projects/clientreadyftsolutionsdombom.png",
     "featured": false
   },
   {
@@ -145,7 +145,7 @@ window.PORTFOLIO_PROJECTS = [
       "HTML"
     ],
     "url": "https://github.com/mafzalkalwardev/dev",
-    "image": "assets/projects/dev.svg",
+    "image": "assets/projects/dev.png",
     "featured": false
   },
   {
@@ -159,7 +159,7 @@ window.PORTFOLIO_PROJECTS = [
       "Node.js"
     ],
     "url": "https://github.com/mafzalkalwardev/devops",
-    "image": "assets/projects/devops.svg",
+    "image": "assets/projects/devops.png",
     "featured": false
   },
   {
@@ -173,7 +173,7 @@ window.PORTFOLIO_PROJECTS = [
       "Node.js"
     ],
     "url": "https://github.com/mafzalkalwardev/devops2",
-    "image": "assets/projects/devops2.svg",
+    "image": "assets/projects/devops2.png",
     "featured": false
   },
   {
@@ -496,7 +496,7 @@ window.PORTFOLIO_PROJECTS = [
       "Node.js"
     ],
     "url": "https://github.com/mafzalkalwardev/quickdraw-test",
-    "image": "assets/projects/quickdraw-test.svg",
+    "image": "assets/projects/quickdraw-test.png",
     "featured": false
   },
   {
