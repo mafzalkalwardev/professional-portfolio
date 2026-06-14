@@ -249,7 +249,7 @@ body { animation: pageIn 0.5s ease; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-  .reveal, .reveal-left, .reveal-scale, .stagger-grid > * {
+  .reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .stagger-grid > * {
     opacity: 1;
     transform: none;
     filter: none;

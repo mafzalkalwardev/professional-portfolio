@@ -48,9 +48,23 @@
     });
   }
 
+  /* ── Scroll progress bar ── */
+  function initScrollProgress() {
+    const bar = document.getElementById('scrollProgress');
+    if (!bar) return;
+    window.addEventListener(
+      'scroll',
+      () => {
+        const h = document.documentElement.scrollHeight - window.innerHeight;
+        bar.style.width = h > 0 ? `${(window.scrollY / h) * 100}%` : '0%';
+      },
+      { passive: true }
+    );
+  }
+
   /* ── Scroll reveal ── */
   function initReveal(els) {
-    const targets = els || document.querySelectorAll('.reveal, .reveal-left, .reveal-scale, .stagger-grid');
+    const targets = els || document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale, .reveal-fade, .stagger-grid');
     const obs = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -199,6 +213,7 @@
 
   /* ── Boot ── */
   initNav();
+  initScrollProgress();
   initHeroWords();
   initCounters();
   initReveal();

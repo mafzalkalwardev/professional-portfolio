@@ -673,9 +673,12 @@ main { padding-top: var(--nav-h); }
   .skills-grid { grid-template-columns: 1fr; }
   .section-panel { padding: 2rem 1.5rem; }
 }
+.nav-links .theme-toggle { margin: 0; }
 @media (max-width: 640px) {
   .nav-toggle { display: flex; }
   .nav-name { display: none; }
+  .theme-toggle { width: 36px; height: 36px; }
+  .nav-links .theme-toggle { width: 100%; height: 42px; margin-top: 0.25rem; }
   .nav-links {
     position: fixed; top: var(--nav-h); left: 0; right: 0;
     flex-direction: column; background: var(--surface);
