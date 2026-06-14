@@ -23,12 +23,12 @@
   <script>
   (function(){try{var s=localStorage.getItem('portfolio-theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;var t=s==='dark'||s==='light'?s:(d?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.style.colorScheme=t;}catch(e){}})();
   </script>
-  <link rel="stylesheet" href="css/styles.css?v=9" />
-  <link rel="stylesheet" href="css/animations.css?v=9" />
-  <link rel="stylesheet" href="css/dark.css?v=9" />
-  <link rel="stylesheet" href="css/patterns.css?v=9" />
-  <link rel="stylesheet" href="css/dark.css?v=9" />
-  <link rel="stylesheet" href="css/patterns.css?v=9" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/animations.css?v=11" />
+  <link rel="stylesheet" href="css/dark.css?v=11" />
+  <link rel="stylesheet" href="css/patterns.css?v=11" />
+  <link rel="stylesheet" href="css/dark.css?v=11" />
+  <link rel="stylesheet" href="css/patterns.css?v=11" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
@@ -104,7 +104,7 @@
 
       <section class="section" style="padding-top:3rem">
         <div class="education-card reveal">
-          <img class="education-logo" src="assets/education/air-university.svg" alt="Air University Islamabad logo" width="72" height="72" />
+          <img class="education-logo" src="assets/education/air-university.png" alt="Air University Islamabad logo" width="72" height="72" />
           <div>
             <span class="education-badge">Graduated</span>
             <h3>Bachelor of Science in Computer Science</h3>
@@ -133,13 +133,43 @@
         </div>
       </section>
 
-      <section class="section section-subtle" style="margin-bottom:3rem">
-        <div class="section-head reveal"><h2>Experience &amp; education</h2></div>
-        <div class="timeline reveal">
-          <div class="timeline-item"><span class="timeline-date">Education · Graduated</span><h3>B.S. Computer Science — Air University, Islamabad</h3><p>Completed Bachelor of Science in Computer Science. Strong foundation in algorithms, software engineering, databases, and systems — applied daily in production projects.</p></div>
-          <div class="timeline-item"><span class="timeline-date">Present</span><h3>Independent developer &amp; FT Solutions</h3><p>Building open source dialers, email platforms, CRM tools, and client websites. Delivering freelance and contract projects remotely from Islamabad.</p></div>
-          <div class="timeline-item"><span class="timeline-date">Portfolio</span><h3>38+ showcased projects</h3><p>Auto dialers, bulk email verifiers, Fiverr CRM, FMCSA scrapers, dispatch websites, ML digit recognition, and more — all on GitHub with real screenshots.</p></div>
-          <div class="timeline-item"><span class="timeline-date">Focus areas</span><h3>Logistics &amp; communications tech</h3><p>Specialized in trucking dispatch automation, Google Voice dialers, carrier data extraction, and email outreach systems for US logistics companies.</p></div>
+      <section class="section section-subtle timeline-section" style="margin-bottom:3rem">
+        <div class="timeline-wrap">
+          <div class="section-head timeline-head reveal"><h2>Experience &amp; education</h2></div>
+          <div class="timeline reveal">
+            <article class="timeline-item">
+              <span class="timeline-date">Education · Graduated</span>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <h3>B.S. Computer Science — Air University, Islamabad</h3>
+                <p>Completed Bachelor of Science in Computer Science. Strong foundation in algorithms, software engineering, databases, and systems — applied daily in production projects.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">Present</span>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <h3>Independent developer &amp; FT Solutions</h3>
+                <p>Building open source dialers, email platforms, CRM tools, and client websites. Delivering freelance and contract projects remotely from Islamabad.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">Portfolio</span>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <h3>38+ showcased projects</h3>
+                <p>Auto dialers, bulk email verifiers, Fiverr CRM, FMCSA scrapers, dispatch websites, ML digit recognition, and more — all on GitHub with real screenshots.</p>
+              </div>
+            </article>
+            <article class="timeline-item">
+              <span class="timeline-date">Focus areas</span>
+              <div class="timeline-marker" aria-hidden="true"></div>
+              <div class="timeline-body">
+                <h3>Logistics &amp; communications tech</h3>
+                <p>Specialized in trucking dispatch automation, Google Voice dialers, carrier data extraction, and email outreach systems for US logistics companies.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </div>
@@ -149,9 +179,9 @@
     <div class="footer-links"><a href="projects.html">Projects</a><a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" download="Muhammad-Afzal-Kalwar-CV.pdf">Download CV</a><a href="contact.html">Contact</a></div>
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
-  <script src="js/site.js?v=9"></script>
-  <script src="js/theme.js?v=9"></script>
-  <script src="js/cv-download.js?v=9"></script>
-  <script src="js/motion.js?v=9"></script>
+  <script src="js/site.js?v=11"></script>
+  <script src="js/theme.js?v=11"></script>
+  <script src="js/cv-download.js?v=11"></script>
+  <script src="js/motion.js?v=11"></script>
 </body>
 </html>

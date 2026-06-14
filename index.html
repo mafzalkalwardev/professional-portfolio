@@ -15,10 +15,10 @@
   <script>
   (function(){try{var s=localStorage.getItem('portfolio-theme');var d=window.matchMedia('(prefers-color-scheme:dark)').matches;var t=s==='dark'||s==='light'?s:(d?'dark':'light');document.documentElement.setAttribute('data-theme',t);document.documentElement.style.colorScheme=t;}catch(e){}})();
   </script>
-  <link rel="stylesheet" href="css/styles.css?v=10" />
-  <link rel="stylesheet" href="css/animations.css?v=10" />
-  <link rel="stylesheet" href="css/dark.css?v=10" />
-  <link rel="stylesheet" href="css/patterns.css?v=10" />
+  <link rel="stylesheet" href="css/styles.css?v=11" />
+  <link rel="stylesheet" href="css/animations.css?v=11" />
+  <link rel="stylesheet" href="css/dark.css?v=11" />
+  <link rel="stylesheet" href="css/patterns.css?v=11" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -81,7 +81,7 @@
                 B.S. Computer Science graduate from Air University Islamabad. I build web apps, Python desktop software, and automation systems for teams that need production-ready code.
               </p>
               <div class="hero-actions">
-                <a href="projects.html" class="btn btn-primary btn-lg">View projects</a>
+                <a href="#featured" class="btn btn-primary btn-lg">View projects</a>
                 <a href="assets/Muhammad-Afzal-Kalwar-CV.pdf" class="btn btn-cv btn-lg" download="Muhammad-Afzal-Kalwar-CV.pdf">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
                   Download CV
@@ -104,7 +104,7 @@
           <div class="bento-card bento-card-accent reveal-scale delay-1">
             <h3>Education</h3>
             <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem">
-              <img src="assets/education/air-university.svg" alt="Air University Islamabad" width="44" height="44" style="border-radius:10px" />
+              <img src="assets/education/air-university.png" alt="Air University Islamabad" width="44" height="44" style="border-radius:10px;object-fit:contain;background:#fff;padding:2px" />
               <div>
                 <p class="education-school" style="margin:0;font-size:0.9375rem">Air University, Islamabad</p>
                 <p style="font-size:0.75rem;color:var(--text-muted);margin:0.15rem 0 0">Graduated · B.S. Computer Science</p>
@@ -143,6 +143,20 @@
       </div>
     </section>
 
+    <section class="section section-colored featured-home" id="featured">
+      <div class="container">
+        <div class="section-head center reveal">
+          <span class="section-label">Featured</span>
+          <h2>Featured projects</h2>
+          <p>Production apps I built — auto dialers, CRM, email platforms, scrapers, and SaaS tools</p>
+        </div>
+        <div class="project-grid featured-grid" id="featuredProjects"></div>
+        <div class="section-cta reveal">
+          <a href="projects.html" class="btn btn-primary btn-lg">View all 38 projects</a>
+        </div>
+      </div>
+    </section>
+
     <section class="section section-colored">
       <div class="container">
         <div class="section-head center reveal">
@@ -166,20 +180,6 @@
           <article class="service-card"><div class="service-num">02</div><h3>Python &amp; desktop software</h3><p>PyQt6 Windows applications, FastAPI services, scripts, and internal business tools.</p></article>
           <article class="service-card"><div class="service-num">03</div><h3>Automation &amp; scraping</h3><p>Playwright and Selenium pipelines for data extraction, monitoring, and workflow automation.</p></article>
           <article class="service-card"><div class="service-num">04</div><h3>AI integration</h3><p>Whisper transcription, LLM-powered features, call analytics, and ML prototypes.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="section-label">Portfolio</span>
-          <h2>Selected projects</h2>
-          <p>Production tools from my open source work — each with a live preview</p>
-        </div>
-        <div class="project-grid" id="featuredProjects"></div>
-        <div class="section-cta reveal">
-          <a href="projects.html" class="btn btn-primary btn-lg">View all 38 projects</a>
         </div>
       </div>
     </section>
@@ -211,12 +211,12 @@
     <p>&copy; <span id="year"></span> Muhammad Afzal Kalwar</p>
   </footer>
 
-  <script src="js/site.js?v=10"></script>
-  <script src="js/theme.js?v=10"></script>
-  <script src="js/cv-download.js?v=10"></script>
-  <script src="js/tech-stack.js?v=10"></script>
-  <script src="js/projects-data.js?v=10"></script>
-  <script src="js/projects.js?v=10"></script>
-  <script src="js/motion.js?v=10"></script>
+  <script src="js/site.js?v=11"></script>
+  <script src="js/theme.js?v=11"></script>
+  <script src="js/cv-download.js?v=11"></script>
+  <script src="js/tech-stack.js?v=11"></script>
+  <script src="js/projects-data.js?v=11"></script>
+  <script src="js/projects.js?v=11"></script>
+  <script src="js/motion.js?v=11"></script>
 </body>
 </html>

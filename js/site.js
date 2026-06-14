@@ -8,6 +8,6 @@ window.SITE = {
     school: "Air University, Islamabad",
     status: "Graduated",
     detail: "Completed B.S. Computer Science from Air University Islamabad — algorithms, software engineering, databases, OS, and systems programming.",
-    logo: "assets/education/air-university.svg",
+    logo: "assets/education/air-university.png",
   },
 };
