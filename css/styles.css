@@ -440,7 +440,7 @@ main { padding-top: var(--nav-h); }
 }
 .filter-btn:hover { color: var(--text); background: var(--bg-subtle); }
 .filter-btn.active {
-  background: var(--text); color: #fff;
+  background: var(--text); color: var(--bg);
   box-shadow: var(--shadow-sm);
 }
 

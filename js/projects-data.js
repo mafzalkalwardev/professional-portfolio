@@ -279,6 +279,22 @@ window.PORTFOLIO_PROJECTS = [
     "featured": false
   },
   {
+    "slug": "mighty-trucking",
+    "name": "Mighty Trucking",
+    "repo": "mighty-trucking",
+    "description": "Production affiliate marketing website for Google Workspace + Google Voice — 9 pages, live stats, interactive wizard, FormSubmit leads, and custom domain mightytrucking.online on GitHub Pages.",
+    "category": "website",
+    "tags": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "url": "https://github.com/mafzalkalwardev/mighty-trucking",
+    "live": "https://mightytrucking.online",
+    "image": "assets/projects/mighty-trucking.png",
+    "featured": true
+  },
+  {
     "slug": "indus-transports-dispatch-website",
     "name": "Indus Transports Dispatch Website",
     "repo": "indus-transports-dispatch-website",
