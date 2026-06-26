@@ -4,11 +4,9 @@
   function fixText(str) {
     if (!str) return '';
     return str
-      .replace(/\u00e2\u20ac\u201d/g, '—')
+      .replace(/\u00e2\u20ac\u201d/g, '-')
       .replace(/\u00e2\u20ac\u201c/g, '"')
-      .replace(/\u00e2\u20ac\u2122/g, "'")
-      .replace(/â€"/g, '—')
-      .replace(/â€"/g, '"');
+      .replace(/\u00e2\u20ac\u2122/g, "'");
   }
 
   function escapeHtml(str) {

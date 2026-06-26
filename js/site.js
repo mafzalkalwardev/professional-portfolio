@@ -7,7 +7,7 @@ window.SITE = {
     shortDegree: "B.S. Computer Science",
     school: "Air University, Islamabad",
     status: "Graduated",
-    detail: "Completed B.S. Computer Science from Air University Islamabad — algorithms, software engineering, databases, OS, and systems programming.",
+    detail: "Completed B.S. Computer Science from Air University Islamabad - algorithms, software engineering, databases, OS, and systems programming.",
     logo: "assets/education/air-university.png",
   },
 };

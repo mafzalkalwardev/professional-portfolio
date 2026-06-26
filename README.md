@@ -1,4 +1,4 @@
-# Muhammad Afzal Kalwar — Professional Portfolio
+# Muhammad Afzal Kalwar - Professional Portfolio
 
 Animated multi-page developer portfolio website.
 
@@ -18,7 +18,7 @@ Animated multi-page developer portfolio website.
 
 - Fully animated UI (scroll reveal, counters, skill bars, page transitions)
 - Responsive dark theme
-- No build step — pure HTML, CSS, JavaScript
+- No build step - pure HTML, CSS, JavaScript
 - GitHub Pages ready
 
 ## Local preview
@@ -33,7 +33,7 @@ Then visit `http://localhost:8080`
 
 ## Author
 
-**Muhammad Afzal Kalwar** — Full-Stack Developer · Open to freelance & remote work
+**Muhammad Afzal Kalwar** - Full-Stack Developer - Open to freelance & remote work
 
 - GitHub: [@mafzalkalwardev](https://github.com/mafzalkalwardev)
 - Email: kalwarmuhammadafzal3@gmail.com
