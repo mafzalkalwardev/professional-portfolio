@@ -148,6 +148,12 @@ html[data-theme="dark"] .hero-word {
   -webkit-text-fill-color: transparent;
 }
 
+html[data-theme="dark"] .filter-btn.active,
+:root:not([data-theme="light"]) .filter-btn.active {
+  background: #f1f5f9;
+  color: #0b1120;
+}
+
 html[data-theme="dark"] .nav.scrolled { background: rgba(15, 23, 42, 0.92); }
 html[data-theme="dark"] .footer { background: linear-gradient(180deg, #0f172a, #0b1120); }
 

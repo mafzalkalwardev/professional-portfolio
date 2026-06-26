@@ -224,6 +224,18 @@ window.PORTFOLIO_PROJECTS = [
     featured: false
   },
   {
+    slug: "mighty-trucking",
+    name: "Mighty Trucking",
+    repo: "mighty-trucking",
+    description: "Affiliate marketing website for Google Workspace and Google Voice with multi-page content, live stats, an interactive wizard, FormSubmit leads, and a custom domain.",
+    category: "website",
+    tags: ["HTML", "CSS", "JavaScript", "Google Voice"],
+    url: "https://github.com/mafzalkalwardev/mighty-trucking",
+    live: "https://mightytrucking.online",
+    image: "assets/projects/mighty-trucking.png",
+    featured: true
+  },
+  {
     slug: "dat-stream-studio",
     name: "DAT Stream Studio",
     repo: "dat-stream-studio",
