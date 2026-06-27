@@ -18,7 +18,6 @@ SKIP_PUSH = {
     "professional-portfolio",
     "mafzalkalwardev.github.io",
     "odysseus",
-    "quickdraw-test",
 }
 
 
@@ -34,21 +33,14 @@ def patch_readme(readme: str, repo: str, has_video: bool) -> str:
     if has_video:
         section += f"[Demo video](docs/screenshots/demo.webm)\n\n"
 
-    if "## Screenshots" in readme:
+    screenshot_heading = re.compile(r"^##[^\n]*Screenshots?\b.*$", re.M | re.I)
+    if screenshot_heading.search(readme):
         readme = re.sub(
-            r"## Screenshots\b.*?(?=\n## |\Z)",
+            r"^##[^\n]*Screenshots?\b.*?(?=\n## |\Z)",
             section.rstrip() + "\n",
             readme,
             count=1,
-            flags=re.S,
-        )
-    elif "## Screenshot" in readme:
-        readme = re.sub(
-            r"## Screenshot\b.*?(?=\n## |\Z)",
-            section.rstrip() + "\n",
-            readme,
-            count=1,
-            flags=re.S,
+            flags=re.S | re.M | re.I,
         )
     else:
         anchor = "## Features"
@@ -60,10 +52,10 @@ def patch_readme(readme: str, repo: str, has_video: bool) -> str:
             readme = readme.rstrip() + "\n\n" + section
 
     readme = re.sub(
-        r"!\[[^\]]*\]\(docs/screenshots/placeholder\.svg\)\s*\n\*Add real captures.*?\*\s*\n?",
+        r"!\[[^\]]*\]\(docs/screenshots/placeholder\.svg\)\s*\n\*(?:Add real captures|Replace).*?\*\s*\n?",
         "",
         readme,
-        flags=re.S,
+        flags=re.S | re.I,
     )
     return readme
 
@@ -111,7 +103,7 @@ def update_repo(project: dict, dry_run: bool = False) -> bool:
         if not status.stdout.strip():
             return False
         subprocess.run(
-            ["git", "-C", str(path), "commit", "-m", "docs: add real project screenshots and demo media"],
+            ["git", "-C", str(path), "commit", "-m", "docs: update project screenshots in README"],
             check=True,
         )
         subprocess.run(["git", "-C", str(path), "push", "origin", "HEAD"], check=True)
